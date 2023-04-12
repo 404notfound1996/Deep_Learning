@@ -9,6 +9,9 @@
 3. MEMORY
 
 **1.事务四大特性（ACID）原子性、一致性、隔离性、持久性？**
+
+[原子性](https://baike.baidu.com/item/原子性?fromModule=lemma_inlink)（atomicity，或称不可分割性）、[一致性](https://baike.baidu.com/item/一致性?fromModule=lemma_inlink)（consistency）、[隔离性](https://baike.baidu.com/item/隔离性?fromModule=lemma_inlink)（isolation，又称独立性）、[持久性](https://baike.baidu.com/item/持久性?fromModule=lemma_inlink)（durability）
+
 **原子性：**一个事务（transaction）中的所有操作，要么全部完成，要么全部不完成，不会结束在中间某个环节。。事务在执行过程中发生错误，会被恢复（Rollback）到事务开始前的状态，就像这个事务从来没有执行过一样。
 **一致性：**在事务开始之前和事务结束以后，数据库的完整性没有被破坏。这表示写入的资料必须完全符合所有的预设规则，这包含资料的精确度、串联性以及后续数据库可以自发性地完成预定的工作。
 **隔离性：**数据库允许多个并发事务同时对其数据进行读写和修改的能力，隔离性可以防止多个事务并发执行时由于交叉执行而导致数据的不一致。事务隔离分为不同级别，包括读未提交（Read uncommitted）、读提交（read committed）、可重复读（repeatable read）和串行化（Serializable）。
