@@ -38,3 +38,13 @@
 **4.可串行化**（Serializable）：这是最高的隔离级别
 
 ![在这里插入图片描述](Mysql.assets/2446017144024a30a12d30595e18582e.png)
+
+4. count(1)和count(*)效率 [https://blog.csdn.net/qq_34827674/article/details/122336347]
+
+结论: count(*)=count(1)>count(主键)>count(字段)
+
+count(*)和count(1) :使用主键索引 但是不需要记录字段,因为是常量
+
+count(主键):使用主键索引,需要记录主键字段
+
+count(字段):使用二级索引,通过二级索引找到主键,再进行主键索引  (回表查询)
